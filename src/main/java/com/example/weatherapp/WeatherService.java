@@ -1,11 +1,13 @@
 package com.example.weatherapp;
 
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
-
 import java.util.List;
 import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.ParameterizedTypeReference;
+import org.springframework.http.HttpMethod;
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 
 @Service
 public class WeatherService {
@@ -23,12 +25,24 @@ public class WeatherService {
 
     public Map<String, Object> getGeoCoordinates(String city) {
         String url = GEO_API_URL + "q=" + city + "&limit=1&appid=" + apiKey;
-        List<Map<String, Object>> response = restTemplate.getForObject(url, List.class);
+        List<Map<String, Object>> response = restTemplate.exchange(
+                url,
+                HttpMethod.GET,
+                null,
+                new ParameterizedTypeReference<List<Map<String, Object>>>() {
+        }
+        ).getBody();
         return response != null && !response.isEmpty() ? response.get(0) : null;
     }
 
     public Map<String, Object> getWeatherForecast(double lat, double lon) {
         String url = WEATHER_API_URL + "lat=" + lat + "&lon=" + lon + "&units=metric&appid=" + apiKey;
-        return restTemplate.getForObject(url, Map.class);
+        return restTemplate.exchange(
+                url,
+                HttpMethod.GET,
+                null,
+                new ParameterizedTypeReference<Map<String, Object>>() {
+        }
+        ).getBody();
     }
 }
