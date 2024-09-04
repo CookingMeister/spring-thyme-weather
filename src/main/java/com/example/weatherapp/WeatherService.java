@@ -56,10 +56,10 @@ public class WeatherService {
             for (Map<String, Object> forecast : forecastList) {
                 long timestamp = ((Number) forecast.get("dt")).longValue();
                 LocalDateTime dateTime = LocalDateTime.ofInstant(Instant.ofEpochSecond(timestamp), ZoneId.systemDefault());
-                forecast.put("formattedDate", dateTime.format(formatter));
+                String formattedDate = dateTime.format(formatter);
+                forecast.put("formattedDate", formattedDate);
             }
         }
         return response;
-
     }
 }

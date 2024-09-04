@@ -1,0 +1,9 @@
+body {
+    background: url("night.jpg") no-repeat center fixed;
+    background-size: cover;
+}
+
+.card {
+    background-color: rgba(90, 179, 231, 0.6);
+    backdrop-filter: blur(3px);
+}
