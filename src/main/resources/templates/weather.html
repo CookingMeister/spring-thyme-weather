@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+</head>
+<body>
+    <h1>Weather Forecast for <span th:text="${weatherData.city.name}"></span>, <span th:text="${weatherData.city.country}"></span></h1>
+    
+    <div id="currentWeather">
+        <h2>Current Weather</h2>
+        <img th:src="@{'https://openweathermap.org/img/wn/' + ${weatherData.list[0].weather[0].icon} + '@2x.png'}" alt="Weather Icon">
+        <p>Temperature: <span th:text="${weatherData.list[0].main.temp}"></span>°C</p>
+        <p>Feels Like: <span th:text="${weatherData.list[0].main.feels_like}"></span>°C</p>
+        <p>Description: <span th:text="${weatherData.list[0].weather[0].description}"></span></p>
+        <p>Humidity: <span th:text="${weatherData.list[0].main.humidity}"></span>%</p>
+        <p>Wind Speed: <span th:text="${weatherData.list[0].wind.speed}"></span> m/s</p>
+        
+    </div>
+
+    <div id="forecast">
+        <h2>5-Day Forecast</h2>
+        <!-- iterate through the list to display forecast for each day -->
+    </div>
+
+    <a href="/">Back to Search</a>
+
+    <script th:inline="javascript">
+        /*<![CDATA[*/
+        var weatherData = /*[[${weatherData}]]*/ null;
+        // You can use this weatherData object to populate more detailed forecast information using JavaScript
+        /*]]>*/
+    </script>
+</body>
+</html>
