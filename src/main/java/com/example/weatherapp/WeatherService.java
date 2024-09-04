@@ -1,5 +1,9 @@
 package com.example.weatherapp;
 
+import java.time.Instant;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Map;
 
@@ -37,12 +41,25 @@ public class WeatherService {
 
     public Map<String, Object> getWeatherForecast(double lat, double lon) {
         String url = WEATHER_API_URL + "lat=" + lat + "&lon=" + lon + "&units=metric&appid=" + apiKey;
-        return restTemplate.exchange(
+        Map<String, Object> response = restTemplate.exchange(
                 url,
                 HttpMethod.GET,
                 null,
                 new ParameterizedTypeReference<Map<String, Object>>() {
         }
         ).getBody();
+
+        if (response != null) {
+            @SuppressWarnings("unchecked")
+            List<Map<String, Object>> forecastList = (List<Map<String, Object>>) response.get("list");
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("EEEE, MMM. d");
+            for (Map<String, Object> forecast : forecastList) {
+                long timestamp = ((Number) forecast.get("dt")).longValue();
+                LocalDateTime dateTime = LocalDateTime.ofInstant(Instant.ofEpochSecond(timestamp), ZoneId.systemDefault());
+                forecast.put("formattedDate", dateTime.format(formatter));
+            }
+        }
+        return response;
+
     }
 }
