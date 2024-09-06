@@ -7,28 +7,44 @@ import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Map;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpMethod;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import jakarta.annotation.PostConstruct;
+
 @Service
 public class WeatherService {
 
-    private final String apiKey;
+     private static final Logger logger = LoggerFactory.getLogger(WeatherService.class);
+
+    @Value("${api.key}")
+    private String apiKey;
+
+    // Use the default url string value if the property is not set
+    @Value("${api.weather.url:https://api.openweathermap.org/data/2.5/forecast?}")
+    private String apiWeatherUrl;
+    // Use the default url string value if the property is not set
+    @Value("${api.geo.url:https://api.openweathermap.org/geo/1.0/direct?}")
+    private String apiGeoUrl;
+
     private final RestTemplate restTemplate;
 
-    private static final String WEATHER_API_URL = "https://api.openweathermap.org/data/2.5/forecast?";
-    private static final String GEO_API_URL = "https://api.openweathermap.org/geo/1.0/direct?";
-
-    public WeatherService(@Value("${openweathermap.api.key}") String apiKey, RestTemplate restTemplate) {
-        this.apiKey = apiKey;
+    public WeatherService(RestTemplate restTemplate) {
         this.restTemplate = restTemplate;
     }
 
+    @PostConstruct
+        public void init() {
+            logger.info("WeatherService initialized with apiWeatherUrl: {} and apiGeoUrl: {}", apiWeatherUrl, apiGeoUrl);
+        }
+
     public Map<String, Object> getGeoCoordinates(String city) {
-        String url = GEO_API_URL + "q=" + city + "&limit=1&appid=" + apiKey;
+        String url = apiGeoUrl + "q=" + city + "&limit=1&appid=" + apiKey;
         List<Map<String, Object>> response = restTemplate.exchange(
                 url,
                 HttpMethod.GET,
@@ -40,7 +56,7 @@ public class WeatherService {
     }
 
     public Map<String, Object> getWeatherForecast(double lat, double lon) {
-        String url = WEATHER_API_URL + "lat=" + lat + "&lon=" + lon + "&units=metric&appid=" + apiKey;
+        String url = apiWeatherUrl + "lat=" + lat + "&lon=" + lon + "&units=metric&appid=" + apiKey;
         Map<String, Object> response = restTemplate.exchange(
                 url,
                 HttpMethod.GET,

@@ -27,7 +27,16 @@ This is a Spring Boot application that provides weather forecasts for cities usi
 
 3. Create an `application.properties` file in the `src/main/resources` directory and add your OpenWeatherMap API key:
 
-   `openweathermap.api.key=your_api_key_here`
+   
+   `api.key=your_api_key_here`
+
+   You can also specify the URLs for the OpenWeatherMap API endpoints in the `application.properties` file:
+
+   `api.geo.url=https://api.openweathermap.org/geo/1.0/direct?`
+
+   `api.weather.url=https://api.openweathermap.org/data/2.5/forecast?`
+
+   Note: If you don't specify the `api.geo.url` and `api.weather.url`, the application will use the default URLs provided in the WeatherService.java file.
 
 4. Build the project:
 

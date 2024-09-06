@@ -1,0 +1,150 @@
+2024-09-06T12:08:40.080-03:00  INFO 22624 --- [weatherapp] [restartedMain] c.e.weatherapp.WeatherappApplication     : Starting WeatherappApplication using Java 21.0.3 with PID 22624 (C:\Users\ssmei\Downloads\weatherapp2\weatherapp\target\classes started by ssmei in C:\Users\ssmei\Downloads\weatherapp2\weatherapp)
+2024-09-06T12:08:40.087-03:00  INFO 22624 --- [weatherapp] [restartedMain] c.e.weatherapp.WeatherappApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-09-06T12:08:40.204-03:00  INFO 22624 --- [weatherapp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-09-06T12:08:40.205-03:00  INFO 22624 --- [weatherapp] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-09-06T12:08:41.904-03:00  INFO 22624 --- [weatherapp] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-09-06T12:08:41.919-03:00  INFO 22624 --- [weatherapp] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-09-06T12:08:41.920-03:00  INFO 22624 --- [weatherapp] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-09-06T12:08:41.966-03:00  INFO 22624 --- [weatherapp] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-09-06T12:08:41.967-03:00  INFO 22624 --- [weatherapp] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1758 ms
+2024-09-06T12:08:42.157-03:00 DEBUG 22624 --- [weatherapp] [restartedMain] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2024-09-06T12:08:42.203-03:00  INFO 22624 --- [weatherapp] [restartedMain] com.example.weatherapp.WeatherService    : WeatherService initialized with apiWeatherUrl: https://api.openweathermap.org/data/2.5/forecast? and apiGeoUrl: https://api.openweathermap.org/geo/1.0/direct?
+2024-09-06T12:08:42.298-03:00  INFO 22624 --- [weatherapp] [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2024-09-06T12:08:42.401-03:00 DEBUG 22624 --- [weatherapp] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 4 mappings in 'requestMappingHandlerMapping'
+2024-09-06T12:08:42.499-03:00 DEBUG 22624 --- [weatherapp] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-09-06T12:08:42.537-03:00 DEBUG 22624 --- [weatherapp] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-09-06T12:08:42.577-03:00 DEBUG 22624 --- [weatherapp] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-09-06T12:08:43.141-03:00  INFO 22624 --- [weatherapp] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-09-06T12:08:43.152-03:00  INFO 22624 --- [weatherapp] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2024-09-06T12:08:43.277-03:00  INFO 22624 --- [weatherapp] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-09-06T12:08:43.299-03:00  INFO 22624 --- [weatherapp] [restartedMain] c.e.weatherapp.WeatherappApplication     : Started WeatherappApplication in 3.89 seconds (process running for 4.452)
+2024-09-06T12:08:43.316-03:00  INFO 22624 --- [weatherapp] [restartedMain] c.e.weatherapp.WeatherappApplication     : Weather App started successfully.
+2024-09-06T12:08:43.316-03:00  INFO 22624 --- [weatherapp] [restartedMain] c.e.weatherapp.WeatherappApplication     : Weather App is still running...
+2024-09-06T12:08:43.320-03:00 ERROR 22624 --- [weatherapp] [main] c.e.weatherapp.WeatherappApplication     : Error starting Weather App
+
+org.springframework.boot.devtools.restart.SilentExitExceptionHandler$SilentExitException: null
+	at org.springframework.boot.devtools.restart.SilentExitExceptionHandler.exitCurrentThread(SilentExitExceptionHandler.java:92) ~[spring-boot-devtools-3.3.3.jar:3.3.3]
+	at org.springframework.boot.devtools.restart.Restarter.immediateRestart(Restarter.java:179) ~[spring-boot-devtools-3.3.3.jar:3.3.3]
+	at org.springframework.boot.devtools.restart.Restarter.initialize(Restarter.java:163) ~[spring-boot-devtools-3.3.3.jar:3.3.3]
+	at org.springframework.boot.devtools.restart.Restarter.initialize(Restarter.java:532) ~[spring-boot-devtools-3.3.3.jar:3.3.3]
+	at org.springframework.boot.devtools.restart.RestartApplicationListener.onApplicationStartingEvent(RestartApplicationListener.java:98) ~[spring-boot-devtools-3.3.3.jar:3.3.3]
+	at org.springframework.boot.devtools.restart.RestartApplicationListener.onApplicationEvent(RestartApplicationListener.java:51) ~[spring-boot-devtools-3.3.3.jar:3.3.3]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185) ~[spring-context-6.1.12.jar:6.1.12]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178) ~[spring-context-6.1.12.jar:6.1.12]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156) ~[spring-context-6.1.12.jar:6.1.12]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138) ~[spring-context-6.1.12.jar:6.1.12]
+	at org.springframework.boot.context.event.EventPublishingRunListener.multicastInitialEvent(EventPublishingRunListener.java:136) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.context.event.EventPublishingRunListener.starting(EventPublishingRunListener.java:75) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$starting$0(SpringApplicationRunListeners.java:54) ~[spring-boot-3.3.3.jar:3.3.3]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.SpringApplicationRunListeners.starting(SpringApplicationRunListeners.java:54) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.3.jar:3.3.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.3.jar:3.3.3]
+	at com.example.weatherapp.WeatherappApplication.main(WeatherappApplication.java:17) ~[classes/:na]
+
+2024-09-06T12:08:43.331-03:00  INFO 22624 --- [weatherapp] [main] c.e.weatherapp.WeatherappApplication     : Weather App is still running...
+2024-09-06T12:08:45.843-03:00  INFO 22624 --- [weatherapp] [RMI TCP Connection(2)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-06T12:08:45.843-03:00  INFO 22624 --- [weatherapp] [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-09-06T12:08:45.844-03:00 DEBUG 22624 --- [weatherapp] [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2024-09-06T12:08:45.844-03:00 DEBUG 22624 --- [weatherapp] [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2024-09-06T12:08:45.844-03:00 DEBUG 22624 --- [weatherapp] [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2024-09-06T12:08:45.845-03:00 DEBUG 22624 --- [weatherapp] [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@385242e5
+2024-09-06T12:08:45.846-03:00 DEBUG 22624 --- [weatherapp] [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@5690a621
+2024-09-06T12:08:45.846-03:00 DEBUG 22624 --- [weatherapp] [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-09-06T12:08:45.847-03:00  INFO 22624 --- [weatherapp] [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2024-09-06T12:10:28.111-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/", parameters={}
+2024-09-06T12:10:28.118-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.weatherapp.WeatherController#home()
+2024-09-06T12:10:28.137-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-1] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-09-06T12:10:28.330-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-09-06T12:10:28.341-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/styles.css", parameters={}
+2024-09-06T12:10:28.341-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/js/time.js", parameters={}
+2024-09-06T12:10:28.348-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-09-06T12:10:28.348-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-09-06T12:10:28.355-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-09-06T12:10:28.355-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-09-06T12:10:28.362-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/night.jpg", parameters={}
+2024-09-06T12:10:28.364-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/sunny.jpg", parameters={}
+2024-09-06T12:10:28.364-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-09-06T12:10:28.365-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-09-06T12:10:28.371-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-09-06T12:10:28.385-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-09-06T12:10:32.013-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : POST "/weather", parameters={masked}
+2024-09-06T12:10:32.015-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.weatherapp.WeatherController#getWeather(String, Model)
+2024-09-06T12:10:32.031-03:00  INFO 22624 --- [weatherapp] [http-nio-8080-exec-6] c.example.weatherapp.WeatherController   : Entering getWeather method
+2024-09-06T12:10:32.217-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-6] o.s.web.client.RestTemplate              : HTTP GET https://api.openweathermap.org/geo/1.0/direct?q=Havana&limit=1&appid=b54627d0769529bdd5c76834e074fdb3
+2024-09-06T12:10:32.221-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-6] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2024-09-06T12:10:32.692-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-6] o.s.web.client.RestTemplate              : Response 200 OK
+2024-09-06T12:10:32.693-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-6] o.s.web.client.RestTemplate              : Reading to [java.util.List<java.util.Map<java.lang.String, java.lang.Object>>]
+2024-09-06T12:10:32.715-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-6] o.s.web.client.RestTemplate              : HTTP GET https://api.openweathermap.org/data/2.5/forecast?lat=23.135305&lon=-82.3589631&units=metric&appid=b54627d0769529bdd5c76834e074fdb3
+2024-09-06T12:10:32.716-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-6] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2024-09-06T12:10:32.817-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-6] o.s.web.client.RestTemplate              : Response 200 OK
+2024-09-06T12:10:32.817-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-6] o.s.web.client.RestTemplate              : Reading to [java.util.Map<java.lang.String, java.lang.Object>]
+2024-09-06T12:10:32.834-03:00  INFO 22624 --- [weatherapp] [http-nio-8080-exec-6] c.example.weatherapp.WeatherController   : Exiting getWeather method
+2024-09-06T12:10:32.835-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-6] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-09-06T12:10:32.956-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/styles.css", parameters={}
+2024-09-06T12:10:32.958-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-09-06T12:10:32.961-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-09-06T12:10:32.969-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/night.jpg", parameters={}
+2024-09-06T12:10:32.970-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-09-06T12:10:32.980-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-09-06T12:10:32.980-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-09-06T12:10:32.984-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/js/time.js", parameters={}
+2024-09-06T12:10:32.985-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-9] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-09-06T12:10:32.990-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-09-06T12:10:32.996-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/sunny.jpg", parameters={}
+2024-09-06T12:10:32.998-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-10] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-09-06T12:10:33.018-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-09-06T12:10:41.530-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/", parameters={}
+2024-09-06T12:10:41.531-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.weatherapp.WeatherController#home()
+2024-09-06T12:10:41.534-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-1] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-09-06T12:10:41.537-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-09-06T12:10:41.546-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/js/time.js", parameters={}
+2024-09-06T12:10:41.546-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/styles.css", parameters={}
+2024-09-06T12:10:41.546-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-09-06T12:10:41.548-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-09-06T12:10:41.550-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-09-06T12:10:41.551-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-09-06T12:10:41.555-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/night.jpg", parameters={}
+2024-09-06T12:10:41.556-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-09-06T12:10:41.557-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/sunny.jpg", parameters={}
+2024-09-06T12:10:41.560-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-09-06T12:10:41.565-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-09-06T12:10:41.578-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-09-06T12:10:44.425-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : POST "/weather", parameters={masked}
+2024-09-06T12:10:44.426-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.weatherapp.WeatherController#getWeather(String, Model)
+2024-09-06T12:10:44.427-03:00  INFO 22624 --- [weatherapp] [http-nio-8080-exec-7] c.example.weatherapp.WeatherController   : Entering getWeather method
+2024-09-06T12:10:44.428-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-7] o.s.web.client.RestTemplate              : HTTP GET https://api.openweathermap.org/geo/1.0/direct?q=Moncton&limit=1&appid=b54627d0769529bdd5c76834e074fdb3
+2024-09-06T12:10:44.429-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-7] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2024-09-06T12:10:44.669-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-7] o.s.web.client.RestTemplate              : Response 200 OK
+2024-09-06T12:10:44.670-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-7] o.s.web.client.RestTemplate              : Reading to [java.util.List<java.util.Map<java.lang.String, java.lang.Object>>]
+2024-09-06T12:10:44.673-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-7] o.s.web.client.RestTemplate              : HTTP GET https://api.openweathermap.org/data/2.5/forecast?lat=46.097995&lon=-64.80011&units=metric&appid=b54627d0769529bdd5c76834e074fdb3
+2024-09-06T12:10:44.675-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-7] o.s.web.client.RestTemplate              : Accept=[application/json, application/*+json]
+2024-09-06T12:10:44.806-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-7] o.s.web.client.RestTemplate              : Response 200 OK
+2024-09-06T12:10:44.808-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-7] o.s.web.client.RestTemplate              : Reading to [java.util.Map<java.lang.String, java.lang.Object>]
+2024-09-06T12:10:44.814-03:00  INFO 22624 --- [weatherapp] [http-nio-8080-exec-7] c.example.weatherapp.WeatherController   : Exiting getWeather method
+2024-09-06T12:10:44.815-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-7] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-09-06T12:10:44.828-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-09-06T12:10:44.836-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/js/time.js", parameters={}
+2024-09-06T12:10:44.836-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/styles.css", parameters={}
+2024-09-06T12:10:44.838-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-09-06T12:10:44.838-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-09-06T12:10:44.843-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-09-06T12:10:44.843-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-09-06T12:10:44.853-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/sunny.jpg", parameters={}
+2024-09-06T12:10:44.855-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-9] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-09-06T12:10:44.873-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-09-06T12:10:50.933-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : GET "/", parameters={}
+2024-09-06T12:10:50.934-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.example.weatherapp.WeatherController#home()
+2024-09-06T12:10:50.935-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-10] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7]
+2024-09-06T12:10:50.939-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-09-06T12:10:50.950-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/styles.css", parameters={}
+2024-09-06T12:10:50.950-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/js/time.js", parameters={}
+2024-09-06T12:10:50.953-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-09-06T12:10:50.953-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-09-06T12:10:50.958-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-09-06T12:10:50.961-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-09-06T12:10:50.967-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/sunny.jpg", parameters={}
+2024-09-06T12:10:50.969-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-09-06T12:10:50.990-03:00 DEBUG 22624 --- [weatherapp] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK

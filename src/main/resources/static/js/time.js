@@ -1,3 +1,8 @@
+/**
+ * Sets the background image and text color of the page based on the current time of day.
+ * If the current hour is between 6 PM and 6 AM, the background is set to a night image and the text color is set to white.
+ * Otherwise, the background is set to a sunny image and the text color is set to black.
+ */
 function setBackgroundBasedOnTime() {
     const currentHour = new Date().getHours();
     const isNight = currentHour >= 18 || currentHour < 6;
