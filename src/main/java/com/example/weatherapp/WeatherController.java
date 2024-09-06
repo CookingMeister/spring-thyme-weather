@@ -23,7 +23,7 @@ public class WeatherController {
 
     @GetMapping("/")
     public String home() {
-        return "index";
+        return ViewState.INDEX.getViewName();
     }
 
     @PostMapping("/weather")
@@ -34,7 +34,7 @@ public class WeatherController {
             Map<String, Object> geoData = weatherService.getGeoCoordinates(city);
             if (geoData == null) {
                 model.addAttribute("error", "City not found");
-                return "index";
+                return ViewState.INDEX.getViewName();
             }
 
             double lat = ((Number) geoData.get("lat")).doubleValue();
@@ -45,6 +45,7 @@ public class WeatherController {
 
         } catch (Exception e) {
             logger.error("Error occurred while fetching weather data", e);
+            return ViewState.ERROR.getViewName(); 
         }
 
         logger.info("Exiting getWeather method");
