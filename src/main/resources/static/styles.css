@@ -7,3 +7,7 @@ body {
     background-color: rgba(90, 179, 231, 0.6);
     backdrop-filter: blur(3px);
 }
+
+.weather-container {
+    max-width: 900px;
+}

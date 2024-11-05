@@ -13,7 +13,7 @@
     <title>Weather App</title>
   </head>
   <body>
-    <div class="container text-center mt-5">
+    <div class="container text-center mt-5 p-5">
       <h1>Weather Forecast</h1>
       <form action="/weather" method="post" class="mt-4 w-75 mx-auto">
         <div class="mb-3">
@@ -30,6 +30,32 @@
       <p th:if="${error}" th:text="${error}" style="color: red"></p>
     </div>
 
+    <div
+      id="weatherContainer"
+      class="container mt-1"
+      style="display: none"
+      th:fragment="weatherData"
+    >
+      <!-- Weather content will go here -->
+    </div>
+
     <script src="js/time.js"></script>
+
+    <script>
+      document.querySelector("form").addEventListener("submit", function (e) {
+        e.preventDefault();
+        const formData = new FormData(this);
+
+        fetch("/weather", {
+          method: "POST",
+          body: formData,
+        })
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("weatherContainer").style.display = "block";
+            document.getElementById("weatherContainer").innerHTML = data;
+          });
+      });
+    </script>
   </body>
 </html>

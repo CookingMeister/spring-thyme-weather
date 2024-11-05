@@ -8,7 +8,6 @@ function setBackgroundBasedOnTime() {
     const isNight = currentHour >= 18 || currentHour < 6;
     const backgroundImage = isNight ? 'night.jpg' : 'sunny.jpg';
     document.body.style.backgroundImage = `url(${backgroundImage})`;
-    document.body.style.backgroundSize = 'cover';
     document.body.style.backgroundRepeat = 'no-repeat';
     document.body.style.backgroundAttachment = 'fixed';
     const textColor = isNight ? 'white' : 'black';

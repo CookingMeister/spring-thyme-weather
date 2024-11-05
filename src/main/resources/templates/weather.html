@@ -13,9 +13,9 @@
     <title>Weather Forecast</title>
   </head>
   <body>
-    <div class="container">
-      <h1 class="my-4 text-center">
-        Weather Forecast for <span th:text="${weatherData.city.name}"></span>,
+    <div class="container weather-container p-3">
+      <h1 class="mb-4 text-center">
+        <span th:text="${weatherData.city.name}"></span>,
         <span th:text="${weatherData.city.country}"></span>
       </h1>
 
