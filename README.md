@@ -14,6 +14,7 @@ This is a Spring Boot application that provides weather forecasts for cities usi
 - Java 21 or higher
 - Maven
 - OpenWeatherMap API key
+- Docker (optional)
 
 ## Setup
 
@@ -25,9 +26,8 @@ This is a Spring Boot application that provides weather forecasts for cities usi
 
    `cd weather-forecast-app`
 
-3. Create an `application.properties` file in the `src/main/resources` directory and add your OpenWeatherMap API key:
+3. Edit the `application.properties` file in the `src/main/resources` directory and add your OpenWeatherMap API key:
 
-   
    `api.key=your_api_key_here`
 
    You can also specify the URLs for the OpenWeatherMap API endpoints in the `application.properties` file:
@@ -38,15 +38,21 @@ This is a Spring Boot application that provides weather forecasts for cities usi
 
    Note: If you don't specify the `api.geo.url` and `api.weather.url`, the application will use the default URLs provided in the WeatherService.java file.
 
-4. Build the project:
+4. Build and run the application:
+
+   Option 1 - Using JAR:
 
    `mvn clean install`
 
-5. Run the application:
-
    `java -jar target/weatherapp-0.0.1-SNAPSHOT.jar`
 
-6. Open a web browser and go to `http://localhost:8080`
+   Option 2 - Using Docker:
+
+   `docker build -t spring-thyme-weather .`
+
+   `docker run -p 8080:8080 spring-thyme-weather`
+
+5. Open a web browser and go to `http://localhost:8080`
 
 ## Usage
 
@@ -60,6 +66,7 @@ This is a Spring Boot application that provides weather forecasts for cities usi
 - Thymeleaf
 - Bootstrap
 - OpenWeatherMap API
+- Docker
 
 ## Contributing
 
